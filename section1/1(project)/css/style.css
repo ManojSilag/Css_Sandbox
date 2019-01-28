@@ -11,15 +11,20 @@ Dark green: #28b485
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+/* The CSS box-sizing property allows us to include the padding and border in an element's total width and height.
+If you set box-sizing: border-box; on an element padding and border are included in the width and height */
 }
 
 body{
     font-family: "Lato",sans-serif;
     font-weight: 400;
+/* The font-weight property sets how thick or thin characters in text should be displayed. */
     font-size: 16px;
+/* The font-size property sets the size of a font. */
     line-height: 1.7;
+/* The line-height property specifies the height of a line. == Distance between lines */
     color: #777;
-    padding: 15px;
+    padding: 30px;
 }
 
 .header{
@@ -31,5 +36,46 @@ body{
       url(../img/hero.jpg);
     background-size: cover;
     background-position: top;
-    clip-path: polygon(0 0 , 100% 0, 100% 75vh, 0 100%)
+/* The background-position property sets the starting position of a background image. */
+    clip-path: polygon(0 0 , 100% 0, 100% 75vh, 0 100%);
+/* The clip-path property in CSS allows you to specify a specific region of an element to display, rather than showing the complete area. */
+    position: relative;
+}
+
+.logo-box{
+    position: absolute;
+/* The position property specifies the type of positioning method used for an element (static, relative, absolute, fixed, or sticky). */
+    top: 40px;
+    left: 40px;
+}
+
+.logo{
+    height: 35px;
+}
+
+.text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+/* The translate() method moves an element from its current position (according to the parameters given for the X-axis and the Y-axis) */
+}
+.heading-primary{
+ color: #ffffff;
+ text-transform: uppercase;
+}
+
+.heading-primary-main{
+ display: block;
+ font-size: 60px;
+ font-weight: 400;
+ letter-spacing: 35px;
+}
+
+.heading-primary-sub{
+ display: block;
+/* Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width */
+ font-size: 20px;
+ font-weight: 700;
+ letter-spacing: 17px;
 }
