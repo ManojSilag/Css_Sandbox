@@ -7,24 +7,31 @@ Dark green: #28b485
 
 */
 
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-/* The CSS box-sizing property allows us to include the padding and border in an element's total width and height.
-If you set box-sizing: border-box; on an element padding and border are included in the width and height */
+    box-sizing: inherit;
+}
+
+html{
+  font-size: 62.5%;
 }
 
 body{
     font-family: "Lato",sans-serif;
     font-weight: 400;
 /* The font-weight property sets how thick or thin characters in text should be displayed. */
-    font-size: 16px;
+    /* font-size: 16px; */
 /* The font-size property sets the size of a font. */
     line-height: 1.7;
 /* The line-height property specifies the height of a line. == Distance between lines */
     color: #777;
-    padding: 30px;
+    padding: 3rem;
+    box-sizing: border-box;
+    /* The CSS box-sizing property allows us to include the padding and border in an element's total width and height.
+    If you set box-sizing: border-box; on an element padding and border are included in the width and height */
 }
 
 .header{
@@ -45,12 +52,12 @@ body{
 .logo-box{
     position: absolute;
 /* The position property specifies the type of positioning method used for an element (static, relative, absolute, fixed, or sticky). */
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
 .logo{
-    height: 35px;
+    height: 3.5rem;
 }
 
 .text-box{
@@ -64,7 +71,7 @@ body{
 .heading-primary{
  color: #ffffff;
  text-transform: uppercase;
- margin-bottom: 60px;
+ margin-bottom: 6rem;
  backface-visibility: hidden;
 /* The backface-visibility property defines whether or not the back face of an element should be visible when facing the user.
 The back face of an element is a mirror image of the front face being displayed.This property is useful when an element is rotated. It lets you choose if the user should see the back face or not. */
@@ -72,9 +79,9 @@ The back face of an element is a mirror image of the front face being displayed.
 
 .heading-primary-main{
  display: block;
- font-size: 60px;
+ font-size: 6rem;
  font-weight: 400;
- letter-spacing: 35px;
+ letter-spacing: 3.5rem;
  animation-name: moveInLeft;
  animation-duration: 1s;
  /* animation-delay: 3s; */
@@ -85,44 +92,44 @@ The back face of an element is a mirror image of the front face being displayed.
 .heading-primary-sub{
  display: block;
 /* Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width */
- font-size: 20px;
+ font-size: 2rem;
  font-weight: 700;
- letter-spacing: 21px;
+ letter-spacing: 1.75rem;
  animation: moveInRight 1s ease-out;
 }
 
 @keyframes moveInLeft{
     0%{
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
     }
     80%{
-    transform: translateX(10px);
+    transform: translateX(1rem);
     }
     100%{
         opacity: 1;
-        transform: translateX(0px);
+        transform: translateX(0);
     }
 }
 
 @keyframes moveInRight{
     0%{
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
     }
     80%{
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
     }
     100%{
     opacity: 1;
-    transform: translateX(0px);
+    transform: translateX(0);
     }
 }
 
 @keyframes moveInDown{
     0%{
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(3rem);
     }
     100%{
     opacity: 1;
@@ -143,21 +150,22 @@ Note: a:active MUST come after a:hover in the CSS definition in order to be effe
    text-transform: uppercase;
    text-decoration: none;
 /* The text-decoration property specifies the decoration added to text */
-   padding: 15px 40px;
+   padding: 1.5rem 4rem;
    display: inline-block;
 /* Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values */
-   border-radius: 100px;
+   border-radius: 10rem;
    transition: all .2s;
 /* CSS transitions allows you to change property values smoothly (from one value to another), over a given duration. */
   position: relative;
+  font-size: 1.6rem;
 }
 .btn:hover{
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
 }
 .btn:active{
     transform: translateY(-1px);
-     box-shadow: 0 5px 10px rgba(0,0,0,.2);
+     box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
 /* box-shadow: h-offset v-offset blur spread color */
 }
 .btn-white{
@@ -171,7 +179,7 @@ Use the content property to specify the content to insert. */
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: absolute;
     top: 0;
     left: 0;
