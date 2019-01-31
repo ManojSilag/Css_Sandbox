@@ -49,18 +49,18 @@ body{
     position: relative;
 }
 
-.logo-box{
+.header__logo-box{
     position: absolute;
 /* The position property specifies the type of positioning method used for an element (static, relative, absolute, fixed, or sticky). */
     top: 4rem;
     left: 4rem;
 }
 
-.logo{
+.header__logo{
     height: 3.5rem;
 }
 
-.text-box{
+.header__text-box{
     position: absolute;
     top: 40%;
     left: 50%;
@@ -77,7 +77,7 @@ body{
 The back face of an element is a mirror image of the front face being displayed.This property is useful when an element is rotated. It lets you choose if the user should see the back face or not. */
 }
 
-.heading-primary-main{
+.heading-primary--main{
  display: block;
  font-size: 6rem;
  font-weight: 400;
@@ -89,7 +89,7 @@ The back face of an element is a mirror image of the front face being displayed.
  animation-timing-function: ease-out;
 }
 
-.heading-primary-sub{
+.heading-primary--sub{
  display: block;
 /* Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width */
  font-size: 2rem;
@@ -136,7 +136,7 @@ The back face of an element is a mirror image of the front face being displayed.
     transform: translateY(0px);
     }
 }
-.btn-animated{
+.btn--animated{
     animation : moveInDown 1s ease-out .75s;
     animation-fill-mode: backwards;
 /* The animation-fill-mode property specifies a style for the element when the animation is not playing (before it starts, after it ends, or both).
@@ -168,7 +168,7 @@ Note: a:active MUST come after a:hover in the CSS definition in order to be effe
      box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
 /* box-shadow: h-offset v-offset blur spread color */
 }
-.btn-white{
+.btn--white{
     background-color: white;
     color: #777;
 }
@@ -189,7 +189,7 @@ An element with greater stack order is always in front of an element with a lowe
     transition: all .4s;
     opacity: 0.5;
 }
-.btn-white::after{
+.btn--white::after{
     background-color: white;
 }
 .btn:hover::after{
