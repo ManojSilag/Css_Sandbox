@@ -6,3 +6,159 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Lato",sans-serif;
+  font-weight: 400;
+  /* The font-weight property sets how thick or thin characters in text should be displayed. */
+  /* font-size: 16px; */
+  /* The font-size property sets the size of a font. */
+  line-height: 1.7;
+  /* The line-height property specifies the height of a line. == Distance between lines */
+  color: #777;
+  padding: 3rem;
+  box-sizing: border-box;
+  /* The CSS box-sizing property allows us to include the padding and border in an element's total width and height.
+    If you set box-sizing: border-box; on an element padding and border are included in the width and height */ }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.7), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  /* The background-position property sets the starting position of a background image. */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /* The clip-path property in CSS allows you to specify a specific region of an element to display, rather than showing the complete area. */
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    /* The position property specifies the type of positioning method used for an element (static, relative, absolute, fixed, or sticky). */
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* The translate() method moves an element from its current position (according to the parameters given for the X-axis and the Y-axis) */
+    text-align: center; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 6rem;
+  backface-visibility: hidden;
+  /* The backface-visibility property defines whether or not the back face of an element should be visible when facing the user.
+    The back face of an element is a mirror image of the front face being displayed.This property is useful when an element is rotated. It lets you choose if the user should see the back face or not. */ }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    /* animation-delay: 3s; */
+    /* animation-iteration-count: 3; */
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    /* Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width */
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+
+.btn--animated {
+  animation: moveInDown 1s ease-out .75s;
+  animation-fill-mode: backwards;
+  /* The animation-fill-mode property specifies a style for the element when the animation is not playing (before it starts, after it ends, or both).
+Let the div element get the style values set by the first keyframe before the animation starts (during the animation-delay period) */ }
+
+.btn:link, .btn:visited {
+  /* Note: a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.
+        Note: a:active MUST come after a:hover in the CSS definition in order to be effective. */
+  text-transform: uppercase;
+  text-decoration: none;
+  /* The text-decoration property specifies the decoration added to text */
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  /* Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values */
+  border-radius: 10rem;
+  transition: all .2s;
+  /* CSS transitions allows you to change property values smoothly (from one value to another), over a given duration. */
+  position: relative;
+  font-size: 1.6rem; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scale(1.5);
+    opacity: 0; }
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  /* box-shadow: h-offset v-offset blur spread color */ }
+
+.btn--white {
+  background-color: #fff;
+  color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
+
+.btn::after {
+  /* The ::after selector inserts something after the content of each selected element(s).
+        Use the content property to specify the content to insert. */
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* The z-index property specifies the stack order of an element.
+        An element with greater stack order is always in front of an element with a lower stack order. */
+  transition: all .4s;
+  opacity: 0.5; }
