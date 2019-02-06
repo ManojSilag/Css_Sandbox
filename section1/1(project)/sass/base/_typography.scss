@@ -1,0 +1,44 @@
+body{
+    font-family: "Lato",sans-serif;
+    font-weight: 400;
+    /* The font-weight property sets how thick or thin characters in text should be displayed. */
+    /* font-size: 16px; */
+    /* The font-size property sets the size of a font. */
+    line-height: 1.7;
+    /* The line-height property specifies the height of a line. == Distance between lines */
+    color: $color-grey-dark;
+    padding: 3rem;
+}
+
+
+.heading-primary{
+    color: $color-white;
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+    backface-visibility: hidden;
+    /* The backface-visibility property defines whether or not the back face of an element should be visible when facing the user.
+    The back face of an element is a mirror image of the front face being displayed.This property is useful when an element is rotated. It lets you choose if the user should see the back face or not. */
+
+
+    &--main{
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        /* animation-delay: 3s; */
+        /* animation-iteration-count: 3; */
+        animation-timing-function: ease-out;
+    }
+
+
+    &--sub{
+        display: block;
+        /* Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width */
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+        animation: moveInRight 1s ease-out;
+    }
+}
