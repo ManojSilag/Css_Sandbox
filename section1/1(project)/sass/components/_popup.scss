@@ -10,11 +10,6 @@
     visibility: hidden;
     transition: all .3s;
 
-    &:target {
-        opacity: 1;
-        visibility: visible;
-    }
-
     &__content{
     @include abscenter;
     width: 75%;
@@ -24,15 +19,15 @@
     display: table;
     //	Let the element behave like a <table> element
     overflow: hidden;
-  
+    opacity: 0;
+    transform: translate(-50%,-50%) scale(.25);
+    transition: all .5s .2s;
     }
 
     &__left{
         width: 33.33333%;
         display: table-cell;
         //table-cell == Let the element behave like a <td> element
-
-
     }
 
     &__right{
@@ -66,6 +61,37 @@
         -ms-hyphens: auto;
         hyphens: auto;
         //The hyphens property defines whether hyphenation is allowed to create more soft wrap opportunities within a line of text.
+    }
 
+
+    //Open states
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__content{
+        opacity: 1;
+        transform: translate(-50%,-50%) scale(1);
+
+    }
+
+    &__close{
+        &:link,
+        &:visited{
+            color: $color-grey-dark-2;
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            font-size: 3rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all .2s;
+            line-height: 1;
+        }
+
+        &:hover{
+            color: $color-primary;
+        }
     }
 }
