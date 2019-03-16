@@ -12,6 +12,10 @@
     /* The clip-path property in CSS allows you to specify a specific region of an element to display, rather than showing the complete area. */
     position: relative;
 
+    @include respond(phone){
+    clip-path: polygon(0 0 , 100% 0, 100% 85vh, 0 100%);
+    }
+
 
     &__logo-box{
         position: absolute;

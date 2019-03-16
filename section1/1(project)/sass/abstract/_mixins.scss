@@ -29,6 +29,8 @@ $breakpoint argumnent choices;
 -tab-land
 -big-desktop
 
+ORDER: BASE + typography > generl layout + grid > page layout > components
+
 1em = 16px;
 */
 @mixin respond($breakpoint){
