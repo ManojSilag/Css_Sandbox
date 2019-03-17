@@ -22,12 +22,19 @@
     opacity: 0;
     transform: translate(-50%,-50%) scale(.25);
     transition: all .5s .2s;
+    @include respond(tab-land){
+      text-align: center;
+    }
     }
 
     &__left{
         width: 33.33333%;
         display: table-cell;
         //table-cell == Let the element behave like a <td> element
+        @include respond(tab-land){
+            visibility: hidden;
+            width: 0%;
+        }
     }
 
     &__right{
@@ -36,6 +43,11 @@
         vertical-align: middle;
         //The vertical-align property sets the vertical alignment of an element.
         padding: 3rem 5rem;
+
+        @include respond(tab-land){
+            width: 100%;
+            padding: 1.5rem 2.5rem
+        }
 
     }
 
