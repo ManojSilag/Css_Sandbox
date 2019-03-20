@@ -26,11 +26,16 @@
         width: 15rem;
         height: 15rem;
         float: left;
-        shape-outside: circle(50% at 50% 50%);
+        border-radius: 50%;
         //The shape-outside property controls how content will wrap around a floated element’s bounding-box. Typically this is so that text can reflow over a shape such as a circle, ellipse or a polygon
-        clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg);
         position: relative;
+        overflow: hidden;
+        @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)){
+            clip-path: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+            border-radius: none;
+        }
 
         @include respond(phone){
             transform: translateX(-3rem) skewX(0);

@@ -13,6 +13,7 @@
         top:0;
         left: 0;
         width: 100%;
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         //The backface-visibility property defines whether or not the back face of an element should be visible when facing the user.The back face of an element is a mirror image of the front face being displayed. This property is useful when an element is rotated. It lets you choose if the user should see the back face or not.
         border-radius: 3px;
