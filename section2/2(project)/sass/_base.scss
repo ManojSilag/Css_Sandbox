@@ -20,6 +20,13 @@
     --line: 1px solid var(--color-grey-light-2);
 }
 
+$bp-largest: 75em; //1200px /16
+$bp-large: 68.75em; //1100px /16
+$bp-medium: 56.25em; //900px
+
+
+
+
 *{
     margin: 0;
     padding: 0;
@@ -31,10 +38,15 @@
 *::before{
     box-sizing: inherit;
 }
+
 html{
     box-sizing: border-box;
     //Width and height apply to all parts of the element: content, padding and borders
     font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%;
+
+    @media only screen and (max-width: $bp-large){
+        font-size: 50%;
+    }
 }
 
 body{
