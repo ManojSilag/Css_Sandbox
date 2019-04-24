@@ -7,9 +7,9 @@
     grid-template-rows: repeat(7, 5vw);
     grid-gap: 1.5rem;
     padding: 1.5rem;
+    
 
     &__item{
-
 
         &--1{
             grid-row: 1 /span 2;
@@ -81,10 +81,6 @@
             grid-column: 8 / span 1;
         }
 
-
-
-
-
     }
 
     &__img{
@@ -95,4 +91,8 @@
         display: block;
     }
 
+    // &__img:hover{
+    //     transform: scale(1.01);
+    // }
+    
 }
